@@ -1,6 +1,7 @@
 # Modeling IoT Sensors in Aerospike
 
-This is companion code for my Medium article.
+This is companion code for my Medium article
+[Aerospike Modeling: IoT Sensors](https://medium.com/aerospike-developer-blog/aerospike-modeling-iot-sensors-c74e1411d493).
 
 ## Populate Test Data
 
