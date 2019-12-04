@@ -130,14 +130,13 @@ if version_tuple(aerospike.__version__) < version_tuple("3.4.0") or version_tupl
 pp = pprint.PrettyPrinter(indent=2)
 sensor_id = options.sensor_id
 spacer = "=" * 30
-minute = 0
-key = (namespace, set, "sensor{}-12-31".format(sensor_id))
-print("\nRetrieve sensor{} data for 8-11am, December 31st".format(sensor_id))
-if options.interactive:
-    pause()
-starts = 8 * 60
-ends = 11 * 60
 try:
+    key = (namespace, set, "sensor{}-12-31".format(sensor_id))
+    print("\nRetrieve sensor{} data for 8-11am, December 31st".format(sensor_id))
+    if options.interactive:
+        pause()
+    starts = 8 * 60
+    ends = 11 * 60
     ops = [
         lh.list_get_by_value_range(
             "t",
